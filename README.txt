@@ -1,5 +1,5 @@
 Difficulty level : All
-Number of Questions Solved on Array : 
+Number of Questions Solved on Stack : 
     Easy    - 1
     Medium  - 0
     hard    - 0
