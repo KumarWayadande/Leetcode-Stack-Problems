@@ -1,3 +1,12 @@
+/*
+--------------------------------------
+Code Version : 1
+Author : Kumar Wayadande
+Upgraded Version ? No
+Test Cases : passed
+--------------------------------------
+*/
+
 #include <iostream>
 #include <stack>
 using namespace std;
@@ -58,3 +67,11 @@ int main()
     cout << result;
     return 0;
 }
+
+
+/*
+--------------------------------------
+End of code version 1
+test cases  passed
+--------------------------------------
+*/

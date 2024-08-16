@@ -1,4 +1,3 @@
-
 /*
 --------------------------------------
 Code Version : 1
@@ -26,56 +25,48 @@ struct TreeNode
 class Solution
 {
 public:
-    vector<int> inorderTraversal(TreeNode *root)
+    vector<int> preOrderTraversal(TreeNode *root)
     {
         vector<int> nums;
         stack<TreeNode *> stack;
         TreeNode *current = root;
 
-        while (current != nullptr)
+        while (current != nullptr || !stack.empty())
         {
-            stack.push(current);
-            current = current->left;
-
             if (current == nullptr)
             {
-                while (!stack.empty())
-                {
-                    TreeNode *node = stack.top();
-                    stack.pop();
-                    nums.insert(nums.end(), node->val);
-                    if (node->right != nullptr)
-                    {
-                        current = node->right;
-                        break;
-                    }
-                }
+                current = stack.top();
+                stack.pop();
             }
 
+            nums.insert(nums.end(), current->val);
+            if (current->right)
+                stack.push(current->right);
+
+            current = current->left;
         }
-            return nums;
+        return nums;
     }
 };
 
 int main()
 {
 
-    TreeNode *firstNode = new TreeNode(3);
-    TreeNode *secondNode = new TreeNode(1);
-    TreeNode *thirdNode = new TreeNode(2);
+    TreeNode *firstNode = new TreeNode(1);
+    TreeNode *secondNode = new TreeNode(2);
+    TreeNode *thirdNode = new TreeNode(3);
 
     firstNode->left = secondNode;
     secondNode->right = thirdNode;
 
     Solution s;
-    vector<int> nums = s.inorderTraversal(firstNode);
+    vector<int> nums = s.preOrderTraversal(firstNode);
 
     for (auto x : nums)
         cout << x << " ";
 
     return 0;
 }
-
 
 /*
 --------------------------------------
