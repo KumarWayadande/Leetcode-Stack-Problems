@@ -1,6 +1,6 @@
 Difficulty level : All
-Number of Questions Solved on Stack : 
-    Easy    - 1
+Number of Questions Solved on Stack : 2
+    Easy    - 2
     Medium  - 0
     hard    - 0
 
