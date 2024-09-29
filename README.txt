@@ -1,7 +1,7 @@
 Difficulty level : All
-Number of Questions Solved on Stack : 14
+Number of Questions Solved on Stack : 15
     Easy    - 3
-    Medium  - 11
+    Medium  - 12
     hard    - 0
 
 
