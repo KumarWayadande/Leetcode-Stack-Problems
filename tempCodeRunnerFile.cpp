@@ -1,0 +1,1 @@
+temp.top() == '+' || temp.top() == '-' || temp.top() == '/' || temp.top() == '*' || temp.top() == '^'
